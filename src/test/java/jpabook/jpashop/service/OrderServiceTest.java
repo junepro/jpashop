@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 
 import static org.junit.Assert.*;
-
+//오더서비스 완료
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
@@ -101,7 +101,6 @@ public class OrderServiceTest {
         em.persist(member);
         return member;
     }
-    //이거 남아있으면 되돌리기 실패
 
 
 }
