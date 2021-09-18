@@ -101,6 +101,8 @@ public class OrderServiceTest {
         em.persist(member);
         return member;
     }
+    //이거 남아있으면 되돌리기 실패
+
 
 
 }
