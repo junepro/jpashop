@@ -1,4 +1,4 @@
-package jpabook.jpashop.controller;
+package jpabook.jpashop.api;
 
 import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Order;
@@ -59,7 +59,6 @@ public class OrderSimpleApiController {
         return result;
 
     }
-
     //공용으로 쓰기 쓰기힘듦
     //벗 지정해서 만든거라 최적화는 좋음
     @GetMapping("/api/v4/simple-orders")
