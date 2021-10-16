@@ -80,6 +80,8 @@ public class OrderRepostiory {
                         " join fetch o.delivery d", Order.class
         ).getResultList();
     }
+
+
 //distinct 엔티티 중복을 걸러서 제공
 //컬렉션 패치조인하면 페이징불가능
     public List<Order> findAllWithItem() {
@@ -92,5 +94,16 @@ public class OrderRepostiory {
                 .getResultList();
 
     }
+
+    public List<Order> findAllWithMemberDelivery(int offset, int limit) {
+            return em.createQuery(
+                    "select o from Order o" +
+                            " join fetch o.member m" +
+                            " join fetch o.delivery d", Order.class
+            )
+                    .setFirstResult(offset)
+                    .setMaxResults(limit)
+                    .getResultList();
+        }
 
 }
